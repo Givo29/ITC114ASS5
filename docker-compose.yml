@@ -1,0 +1,13 @@
+---
+version: "3.6"
+services:
+  itc144ass5:
+    image: mysql
+    container_name: itc114ass5
+    command: --init-file /data/application/init.mysql
+    volumes:
+      - ./init.sql:/data/application/init.mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    expose:
+      - 3306
